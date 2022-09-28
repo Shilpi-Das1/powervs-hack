@@ -213,13 +213,21 @@ compute:
 - architecture: ppc64le
   hyperthreading: Enabled
   name: worker
-  platform: {}
+  platform:
+    powervs:
+      processors: 1
+      MemoryGiB: 64
+      sysType: e980
   replicas: 3
 controlPlane:
   architecture: ppc64le
   hyperthreading: Enabled
   name: master
-  platform: {}
+  platform:
+    powervs:
+      processors: 1
+      MemoryGiB: 64
+      sysType: e980
   replicas: 3
 metadata:
   creationTimestamp: null
